@@ -17,10 +17,7 @@ view: year_before {
       ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
+
   dimension: id {
     primary_key: yes
     sql: ${TABLE}.bm_d_calender_dt_dt_date ;;
