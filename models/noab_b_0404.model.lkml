@@ -4,8 +4,8 @@ connection: "noab_b_0404"
 include: "/views/**/*.view"
 
 datagroup: noab_b_0404_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  sql_trigger: SELECT MAX(id) FROM etl_log;;
+  max_cache_age: "24 hour"
 }
 
 persist_with: noab_b_0404_default_datagroup
