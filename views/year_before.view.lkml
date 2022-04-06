@@ -30,7 +30,7 @@ view: year_before {
 
   dimension: calculation_2 {
     type: number
-    sql: ${TABLE}.calculation_2 ;;
+    sql: ${TABLE}.calculation_2/10000 ;;
   }
 
   set: detail {
