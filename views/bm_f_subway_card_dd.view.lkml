@@ -19,17 +19,17 @@ view: bm_f_subway_card_dd {
 
   dimension: get_cnt {
     type: number
-    sql: ${TABLE}.get_cnt ;;
+    sql: ${TABLE}.get_cnt/10000 ;;
   }
 
   dimension: get_off_cnt {
     type: number
-    sql: ${TABLE}.get_off_cnt ;;
+    sql: ${TABLE}.get_off_cnt/10000 ;;
   }
 
   dimension: moving_passenger_cnt {
     type: number
-    sql: ${TABLE}.moving_passenger_cnt ;;
+    sql: ${TABLE}.moving_passenger_cnt/10000 ;;
   }
 
   dimension: station_nm {
@@ -44,7 +44,7 @@ view: bm_f_subway_card_dd {
 
   dimension: sunsusong_cnt {
     type: number
-    sql: ${TABLE}.sunsusong_cnt ;;
+    sql: ${TABLE}.sunsusong_cnt/10000 ;;
   }
 
   measure: count {
