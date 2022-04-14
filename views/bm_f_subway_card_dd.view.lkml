@@ -47,6 +47,26 @@ view: bm_f_subway_card_dd {
     sql: ${TABLE}.sunsusong_cnt/10000 ;;
   }
 
+  measure: dynamic_filter_value{
+    type: max
+    sql: 1 ;;
+    html: <p style =
+              "color: #000000;
+              font-size:30%;
+              text-align:center">
+              기간 : {% if _filters['dt_date']%}
+                          {{_filters['dt_date']}}
+                          {% else %} 전체 {% endif %}
+
+
+      &nbsp;&nbsp;&nbsp;
+      호선 : {% if _filters['subway_line_nm']%}
+      {{_filters['subway_line_nm']}}
+      {% else %} 전체 {% endif %}
+      &nbsp;&nbsp;&nbsp;
+      </p>;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
